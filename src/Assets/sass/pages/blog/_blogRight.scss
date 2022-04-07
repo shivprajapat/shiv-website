@@ -1,0 +1,233 @@
+.right-section {
+  position: relative;
+
+  .blog-box-tab {
+    border: 1px solid $form-input;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .ttl {
+      position: relative;
+      display: block;
+      font-size: 22px;
+      margin-bottom: 30px;
+      font-family: var(--font_kr);
+      border-bottom: 1px solid #ddd;
+      font-weight: 500;
+      width: 100%;
+      text-transform: capitalize;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 80px;
+        height: 1px;
+        border-radius: 10px;
+        background-color: $aqua;
+        left: 0;
+        bottom: -2px;
+      }
+    }
+
+    form {
+      position: relative;
+
+      .form-control {
+        height: 45px;
+        border-radius: 0;
+        border: 0;
+        background-color: #f4f4f4;
+        font-family: var(--font_rr);
+        font-weight: 500;
+        color: $desc-color;
+      }
+
+      button {
+        width: 43px;
+        height: 37px;
+        background-color: transparent;
+        border-radius: 5px;
+        @include Transition(0.3s);
+        color: $aqua;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font-size: 20px;
+        transform: translate(-11%, -50%);
+        display: flex;
+
+        &:hover {
+          background-color: $aqua;
+          color: $white !important;
+        }
+      }
+    }
+
+    .blog-post {
+      article {
+        margin-bottom: 10px;
+      }
+      .item {
+        @include flex(center, null, null);
+        @include Transition(0.3s);
+        &:hover {
+          a {
+            color: $aqua !important;
+          }
+        }
+        img {
+          width: 60px;
+          height: 60px;
+          display: inline-block;
+          border-radius: 5px;
+          background-size: cover !important;
+          background-repeat: no-repeat;
+          background-position: 50% !important;
+        }
+        .info {
+          margin-left: 10px;
+          span {
+          display: block;
+          color: #6b6b84;
+          text-transform: uppercase;
+          margin-top: -2px;
+          margin-bottom: 5px;
+          font-size: 13px;
+        }}
+
+        a {
+          color: $desc-color;
+          margin-bottom: 0;
+          font-size: 17px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .social-links {
+      padding-left: 0;
+
+      li {
+        display: inline-block;
+        padding-right: 20px;
+        line-height: 26px;
+        font-family: var(--font_rr);
+        padding-bottom: 10px;
+        @include Transition(0.3s);
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        &:hover {
+          color: $aqua;
+
+          a {
+            color: $aqua;
+            box-shadow: 0 0 10px $gray;
+            background-color: transparent !important;
+          }
+        }
+
+        a {
+          color: $white;
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          display: block;
+          text-align: center;
+          line-height: 40px;
+          @include Transition(0.5s);
+          font-size: 18px;
+        }
+
+        &:nth-child(1) a {
+          background-color: #3b5998;
+        }
+
+        &:nth-child(2) a {
+          background-color: #de4e43;
+        }
+
+        &:nth-child(3) a {
+          background-color: #8a5a4e;
+        }
+
+        &:nth-child(4) a {
+          background-color: #209bd6;
+        }
+
+        &:nth-child(5) a {
+          background-color: #1ea1f3;
+        }
+      }
+    }
+
+    .tags {
+      li {
+        margin-right: 10px;
+        font-size: 13px;
+        border: none;
+        padding: 6px 20px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        display: inline-block;
+        background-color: #f4f4f4;
+        @include Transition(0.3s);
+        border-radius: 3px;
+        line-height: 22px;
+        cursor: pointer;
+
+        &:hover {
+          background: $aqua;
+
+          a {
+            color: $white;
+          }
+        }
+
+        a {
+          line-height: 0;
+          font-size: 12px;
+          color: $desc-color;
+          font-weight: 700;
+          font-family: var(--font_rr);
+        }
+      }
+    }
+
+    .categories {
+      li {
+        margin-bottom: 10px;
+        position: relative;
+        @include Transition(0.3s);
+        padding-left: 20px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: 25%;
+          left: 0;
+          border-radius: 50%;
+          background-color: $aqua;
+        }
+
+        a {
+          color: $btn-color;
+          font-weight: 600;
+        }
+        &:hover {
+          a {
+            color: $aqua !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.author {
+  margin-top: 30px;
+  border-radius: 5px;
+  background: #fdfcfc;
+  position: relative;
+  .social-icons {
+    @include flex(center, flex-end, null);
+    li {
+      position: relative;
+      width: 35px;
+      height: 35px;
+      @include flex(center, center, null);
+      border-radius: 50%;
+      @include Transition(0.5s);
+      border: 2px solid #e6e4e4;
+      margin-right: 10px;
+      text-align: center;
+      &:nth-child(1){
+        background-color: #3b5998;
+        a{
+          color: $white;
+        }
+      }&:nth-child(2){
+        background-color: #1da1f2;
+        a{
+          color: $white;
+        }
+      }&:nth-child(3){
+        background-color: #007bb5;
+        a{
+          color: $white;
+        }
+      }&:nth-child(4){
+        background-color: #c13584;
+        a{
+          color: $white;
+        }
+      }
+      &:hover {
+        background-color: $aqua;
+        box-shadow: 0 0 10px $shadow;
+        a {
+          color: $white;
+        }
+      }
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+  .author_area {
+    .author_head {
+      height: 115px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 60px $shadow;
+      img {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .author_profile {
+      padding: 0 25px 25px;
+      &_title {
+        position: relative;
+        z-index: 1;
+        margin-top: -45px;
+        img {
+          display: inline-block;
+          border: 5px solid $white;
+          width: 100px;
+          height: 100px;
+          margin-bottom: 25px;
+          border-radius: 100%;
+        }
+        h4 {
+          margin-bottom: 5px;
+          font-size: 22px;
+          font-family: var(--font_kr);
+          font-weight: 600;
+        }
+        span {
+          display: block;
+          margin-bottom: 12px;
+          font-size: 16px;
+          color: $btn-color;
+          font-weight: 600;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
